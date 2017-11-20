@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		033247E81FB5990800BBBD87 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 033247E71FB5990800BBBD87 /* main.cpp */; };
+		033247F01FB5991900BBBD87 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033247EF1FB5991900BBBD87 /* OpenGL.framework */; };
+		033247F21FB5991E00BBBD87 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033247F11FB5991E00BBBD87 /* GLUT.framework */; };
+		038B32701FBE87BD007D7F62 /* joker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 038B326E1FBE87BD007D7F62 /* joker.cpp */; };
+		038B32731FBE89C9007D7F62 /* batman.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 038B32711FBE89C9007D7F62 /* batman.cpp */; };
+		038B32761FBF2DE2007D7F62 /* creeper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 038B32741FBF2DE2007D7F62 /* creeper.cpp */; };
+		03A2553D1FBF745200800CCC /* steve.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03A2553B1FBF745200800CCC /* steve.cpp */; };
+		03A255401FBF854400800CCC /* superman.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03A2553E1FBF854400800CCC /* superman.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +32,18 @@
 /* Begin PBXFileReference section */
 		033247E41FB5990700BBBD87 /* Assignment2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Assignment2; sourceTree = BUILT_PRODUCTS_DIR; };
 		033247E71FB5990800BBBD87 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		033247EF1FB5991900BBBD87 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		033247F11FB5991E00BBBD87 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		038B326E1FBE87BD007D7F62 /* joker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = joker.cpp; sourceTree = "<group>"; };
+		038B326F1FBE87BD007D7F62 /* joker.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = joker.hpp; sourceTree = "<group>"; };
+		038B32711FBE89C9007D7F62 /* batman.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = batman.cpp; sourceTree = "<group>"; };
+		038B32721FBE89C9007D7F62 /* batman.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = batman.hpp; sourceTree = "<group>"; };
+		038B32741FBF2DE2007D7F62 /* creeper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = creeper.cpp; sourceTree = "<group>"; };
+		038B32751FBF2DE2007D7F62 /* creeper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = creeper.hpp; sourceTree = "<group>"; };
+		03A2553B1FBF745200800CCC /* steve.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = steve.cpp; sourceTree = "<group>"; };
+		03A2553C1FBF745200800CCC /* steve.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = steve.hpp; sourceTree = "<group>"; };
+		03A2553E1FBF854400800CCC /* superman.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = superman.cpp; sourceTree = "<group>"; };
+		03A2553F1FBF854400800CCC /* superman.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = superman.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				033247F21FB5991E00BBBD87 /* GLUT.framework in Frameworks */,
+				033247F01FB5991900BBBD87 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +64,7 @@
 			children = (
 				033247E61FB5990700BBBD87 /* Assignment2 */,
 				033247E51FB5990700BBBD87 /* Products */,
+				033247EE1FB5991900BBBD87 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +80,27 @@
 			isa = PBXGroup;
 			children = (
 				033247E71FB5990800BBBD87 /* main.cpp */,
+				038B326E1FBE87BD007D7F62 /* joker.cpp */,
+				038B326F1FBE87BD007D7F62 /* joker.hpp */,
+				038B32711FBE89C9007D7F62 /* batman.cpp */,
+				038B32721FBE89C9007D7F62 /* batman.hpp */,
+				038B32741FBF2DE2007D7F62 /* creeper.cpp */,
+				038B32751FBF2DE2007D7F62 /* creeper.hpp */,
+				03A2553B1FBF745200800CCC /* steve.cpp */,
+				03A2553C1FBF745200800CCC /* steve.hpp */,
+				03A2553E1FBF854400800CCC /* superman.cpp */,
+				03A2553F1FBF854400800CCC /* superman.hpp */,
 			);
 			path = Assignment2;
+			sourceTree = "<group>";
+		};
+		033247EE1FB5991900BBBD87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				033247F11FB5991E00BBBD87 /* GLUT.framework */,
+				033247EF1FB5991900BBBD87 /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +160,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03A2553D1FBF745200800CCC /* steve.cpp in Sources */,
 				033247E81FB5990800BBBD87 /* main.cpp in Sources */,
+				03A255401FBF854400800CCC /* superman.cpp in Sources */,
+				038B32701FBE87BD007D7F62 /* joker.cpp in Sources */,
+				038B32761FBF2DE2007D7F62 /* creeper.cpp in Sources */,
+				038B32731FBE89C9007D7F62 /* batman.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +262,10 @@
 		033247EC1FB5990800BBBD87 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Assignment2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -223,6 +273,10 @@
 		033247ED1FB5990800BBBD87 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Assignment2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -246,6 +300,7 @@
 				033247ED1FB5990800BBBD87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
