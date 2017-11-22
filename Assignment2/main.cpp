@@ -234,6 +234,36 @@ void Display() {
     drawWall(0.02);
     glPopMatrix();
     
+    glPushMatrix();
+    glRotated(90, 0, 0, 1.0);
+    glTranslated(0, -3, -1.5);
+    //glTranslated(-2, -3, 0);
+    glScaled(5, 0.1, 5);
+    drawWall(0.02);
+    glPopMatrix();
+    
+    glPushMatrix();
+    glRotated(90, 0, 0, 1.0);
+    glTranslated(0, 1, -1.5);
+    //glTranslated(-2, -3, 0);
+    glScaled(5, 0.1, 5);
+    drawWall(0.02);
+    glPopMatrix();
+    
+    glPushMatrix();
+    glRotated(-90, 1.0, 0.0, 0.0);
+    glTranslated(-2, 1, 0);
+    glScaled(5, 0.1, 5);
+    drawWall(0.02);
+    glPopMatrix();
+    
+    glPushMatrix();
+    glRotated(-90, 1.0, 0.0, 0.0);
+    glTranslated(-2, -3, 0);
+    glScaled(5, 0.1, 5);
+    drawWall(0.02);
+    glPopMatrix();
+    
     glFlush();
 }
 
@@ -241,8 +271,8 @@ bool animScene = false;
 
 void AnimScene() {
     if(animScene){
-        float a = 2.0;
-        float d = 0.02;
+        float a = 0.5*2.0;
+        float d = 0.5*0.02;
         if (side == 1){
             camera.rotateY(-a);
             camera.moveX(d);
@@ -363,6 +393,7 @@ void Keyboard(unsigned char key, int x, int y)
             steveAngleRot = 0.0;
             steveHeight = 0.0;
             steveRotUp = true;
+            frontFlip = false;
         } else {
             steveMov = true;
         } break;
@@ -393,6 +424,7 @@ void Keyboard(unsigned char key, int x, int y)
             steveAngleRot = 0.0;
             steveHeight = 0.0;
             steveRotUp = true;
+            frontFlip = false;
         } else {
             jokerMov1 = true;
             batmanMov2 = true;

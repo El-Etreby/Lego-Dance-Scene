@@ -20,11 +20,12 @@ double steveAngleRot = 0.0;
 double steveHeight = 0.0;
 bool steveMov = false;
 bool steveRotUp = true;
+bool frontFlip = false;
 
 void drawSteve() {
     glPushMatrix();
     glRotated(45, 0, 1, 0);
-    glTranslated(0 , steveHeight,0);
+    glTranslated(0 , steveHeight+0.1,0);
     glRotated( -1* steveAngleRot, 0, 0, 1);
     //glTranslated(0, steveHeight, 0);
     //Head
@@ -238,21 +239,43 @@ void drawSteve() {
 
 void movSteve() {
     if(steveMov){
-        steveAngleRot+=1;
-        if(steveAngleRot>=360){
-            steveAngleRot = 0.0;
-        }
-        
-        if(steveRotUp) {
-            steveHeight+=0.01;
-            if(steveHeight>=1.8) {
-                steveRotUp = false;
+        if(frontFlip){
+            steveAngleRot-=1;
+            if(steveAngleRot<=-360){
+                steveAngleRot = 0.0;
+            }
+            
+            if(steveRotUp) {
+                steveHeight+=0.01;
+                if(steveHeight>=1.8) {
+                    steveRotUp = false;
+                }
+            } else {
+                steveHeight-=0.01;
+                if(steveHeight<=0.0) {
+                    steveRotUp = true;
+                    frontFlip = false;
+                }
             }
         } else {
-            steveHeight-=0.01;
-            if(steveHeight<=0.0) {
-                steveRotUp = true;
+            steveAngleRot+=1;
+            if(steveAngleRot>=360){
+                steveAngleRot = 0.0;
             }
-        }   
+            
+            if(steveRotUp) {
+                steveHeight+=0.01;
+                if(steveHeight>=1.8) {
+                    steveRotUp = false;
+                }
+            } else {
+                steveHeight-=0.01;
+                if(steveHeight<=0.0) {
+                    steveRotUp = true;
+                    frontFlip = true;
+                    steveAngleRot = 0.0;
+                }
+            }
+        }
     }
 }

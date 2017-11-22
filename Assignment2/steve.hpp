@@ -15,6 +15,7 @@ extern double steveAngleRot;
 extern double steveHeight;
 extern bool steveMov;
 extern bool steveRotUp;
+extern bool frontFlip;
 
 void drawSteve();
 void movSteve();
