@@ -281,6 +281,7 @@ void AnimScene() {
 }
 
 void Anim() {
+    movJoker1();
     movJoker2();
     movBatman1();
     movBatman2();
@@ -292,7 +293,6 @@ void Anim() {
 }
 
 void Timer(int value) {
-    movJoker1();
     glutPostRedisplay();
     glutTimerFunc(1000, Timer, 0);
 }
@@ -339,6 +339,14 @@ void Keyboard(unsigned char key, int x, int y)
     {
         case '1': if(jokerMov1){
             jokerMov1 = false;
+             jokerHandsUp1 = false;
+             jokerHandsUp2 = true;
+             jokerHandCount = 0.0;
+             jokerUp = true;
+             jokerRight = false;
+             jokerBool = false;
+             jokerTrans = 0.0;
+             jokerTransRight = 0.0;
         } else {
             jokerMov1 = true;
         } break;
@@ -398,7 +406,16 @@ void Keyboard(unsigned char key, int x, int y)
             steveMov = true;
         } break;
         case '8': if(jokerMov1){
+            //Joker
             jokerMov1 = false;
+            jokerHandsUp1 = false;
+            jokerHandsUp2 = true;
+            jokerHandCount = 0.0;
+            jokerUp = true;
+            jokerRight = false;
+            jokerBool = false;
+            jokerTrans = 0.0;
+            jokerTransRight = 0.0;
             //Batman
             batmanMov2 = false;
             batmanCapeUp = true;
@@ -452,7 +469,7 @@ int main(int argc, char** argv) {
     glutDisplayFunc(Display);
     glutSpecialFunc(Special);
     glutIdleFunc(Anim);
-    glutTimerFunc(1000, Timer, 0);
+    //glutTimerFunc(1000, Timer, 0);
     glutKeyboardFunc(Keyboard);
     
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB | GLUT_DEPTH);

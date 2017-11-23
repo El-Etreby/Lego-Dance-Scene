@@ -282,7 +282,7 @@ void movBatman1() {
             if (batmanEjectHands) {
                 if(batmanEjectUp){
                     batmanEjectSpeed+=0.05;
-                    if(batmanEjectSpeed >= 0.5){
+                    if(batmanEjectSpeed >= 1){
                         batmanEjectUp = false;
                     }
                 } else {

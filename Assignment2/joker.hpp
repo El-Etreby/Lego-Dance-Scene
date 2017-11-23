@@ -16,6 +16,12 @@ extern bool jokerHandsUp2;
 extern bool jokerMov1;
 extern double jokerAngleRot;
 extern bool jokerMov2;
+extern double jokerHandCount;
+extern double jokerTrans;
+extern double jokerTransRight;
+extern bool jokerUp;
+extern bool jokerRight;
+extern bool jokerBool;
 
 void drawJoker();
 void movJoker1();
